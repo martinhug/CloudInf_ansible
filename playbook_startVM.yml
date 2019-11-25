@@ -1,0 +1,23 @@
+---
+- name: provision and start VM's
+  hosts: vms
+  connection: local
+  user: root
+
+  tasks:
+    - name: debug inventory names
+      debug:
+        var: hostvars[inventory_hostname]
+    - name: define vm
+      virt:
+        command: define
+        xml: "{{ lookup('template', 'template_vms.xml.j2') }}"
+    - name: start vm
+      virt:
+        name: hostvars[inventory_hostname]
+        state: running
+
+
+
+
+  gather_facts: no

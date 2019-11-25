@@ -4,7 +4,9 @@
 asdf
 
 ## Pre Requirements
-asdf
+* erstellte Bridge (hostonlynetwork)
+* Python PIP
+* Ansible
 
 ## Files in Project
 * asdf

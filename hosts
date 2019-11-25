@@ -1,0 +1,4 @@
+[vms]
+mywebserver ansible_host=10.2.0.10
+myotherserver ansible_host=10.2.0.11
+
